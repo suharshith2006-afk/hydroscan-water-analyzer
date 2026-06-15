@@ -2,7 +2,7 @@
 
 A conceptual mobile-based water quality detection prototype system engineered to simulate liquid spectrometry and chemical analysis. This application models Beer-Lambert law calculations, parsing relative liquid absorbance parameters and heavy metal contamination metrics using a smartphone camera and flashlight as a native optical light source.
 
-Live Demo Link: **[https://hydroscan1.vercel.app/](https://hydroscan1.vercel.app/)**
+🌐 Explore the hydroscan water analyzer : https://hydroscan-water-analyzer.netlify.app/
 
 ---
 
