@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HydroScan | AI-Powered Smartphone Water Quality Analysis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo-area">
+                <img src="logo.png" alt="HydroScan Logo" class="nav-logo" onerror="this.src='https://via.placeholder.com/40x40/005CB9/FFFFFF?text=HS'">
+                <span class="logo-text">Hydro<span>Scan</span></span>
+            </a>
+            <nav class="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About HydroScan</a>
+                <a href="#technology" class="nav-link">Our Technology</a>
+                <a href="#vision" class="nav-link">Vision & Contact</a>
+            </nav>
+            <div class="nav-toggle" id="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="hero-section">
+        <div class="hero-wave-bg"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="badge"><i class="fa-solid fa-microchip"></i> Next-Gen AI Detection</div>
+                <h1 class="hero-title">Smart Water Quality <br><span class="gradient-text">Analysis via Smartphone</span></h1>
+                <p class="hero-desc">
+                    HydroScan revolutionizes environmental monitoring. By leveraging advanced mobile optics, RGB channel separation, and machine learning, anyone can turn their smartphone into a laboratory-grade water contaminant sensor instantly.
+                </p>
+                <div class="hero-buttons">
+                    <button id="start-scan-btn" class="btn btn-primary">Scan Water Now <i class="fa-solid fa-camera"></i></button>
+                    <a href="#about" class="btn btn-secondary">Explore Platform <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="hero-mockup-area">
+                <div class="tech-circle"></div>
+                <div class="phone-mockup">
+                    <div class="phone-speaker"></div>
+                    <div class="phone-screen">
+                        <div class="app-header">
+                            <img src="logo.png" alt="HydroScan" class="app-logo" onerror="this.src='https://via.placeholder.com/30x30/005CB9/FFFFFF?text=HS'">
+                            <span>HydroScan Mobile AI</span>
+                        </div>
+                        <div class="app-scanner">
+                            <div class="scan-laser"></div>
+                            <video id="camera-stream" autoplay playsinline muted></video>
+                            <i class="fa-solid fa-droplet water-icon-scan" id="droplet-placeholder"></i>
+                        </div>
+                        <div class="app-dashboard">
+    <div class="dash-row">
+        <span>RGB Sample Status:</span>
+        <span class="status-tag positive">Captured</span>
+    </div>
+    
+    <div class="dash-metric">
+        <span class="metric-label">Contaminant Threat Index</span>
+        <div class="metric-bar-container">
+            <div class="metric-bar-fill"></div>
+        </div>
+        <div class="metric-value">0.02% (Optimal)</div>
+    </div>
+
+    <div class="dash-metric" style="margin-top: 10px;">
+        <span class="metric-label">Estimated Turbidity Layer</span>
+        <div class="metric-bar-container">
+            <div class="metric-bar-fill" id="turbidity-bar" style="width: 8%;"></div>
+        </div>
+        <div class="metric-value" id="turbidity-val">0.15 NTU</div>
+    </div>
+
+    <div class="dash-metric" style="margin-top: 10px;">
+        <span class="metric-label">Predicted pH Variant Balance</span>
+        <div class="metric-bar-container" style="background: linear-gradient(90deg, #ef4444, #10b981, #3b82f6);">
+            <div class="metric-bar-fill" id="ph-bar" style="width: 50%; background: #ffffff; border: 1px solid #000;"></div>
+        </div>
+        <div class="metric-value" id="ph-val">7.0 pH</div>
+    </div>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-heading">Who We Are</span>
+                <h2 class="main-heading">Intelligent Water Diagnostics</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text-content">
+                    <p class="about-p">
+                        HydroScan is a pioneering utility engineered to bridge the gap between complex analytical lab procedures and real-time field deployments. By turning standard consumer smartphone cameras into highly calibrated colorimetric spectrometers, we put safety data directly into the hands of the public.
+                    </p>
+                    <p class="about-p">
+                        Our framework breaks down incoming video and photographic matrices into distinct RGB component layers, testing variance vectors against mathematical calibration curves. This enables fast, scalable analytical responses to protect communities globally.
+                    </p>
+                </div>
+                <div class="about-highlights-grid">
+                    <div class="highlight-card">
+                        <i class="fa-solid fa-mobile-screen-button icon"></i>
+                        <h3>Mobile Ubiquity</h3>
+                        <p>No external sensory hardware required. Scaled purely via native OS camera processing layers.</p>
+                    </div>
+                    <div class="highlight-card">
+                        <i class="fa-solid fa-bolt icon"></i>
+                        <h3>Real-Time Processing</h3>
+                        <p>Extracts chemical variations and outputs contamination scores within seconds.</p>
+                    </div>
+                    <div class="highlight-card">
+                        <i class="fa-solid fa-brain icon"></i>
+                        <h3>Neural Matrix Matching</h3>
+                        <p>Cross-references target pixel dynamics with baseline environmental contaminant sets.</p>
+                    </div>
+                    <div class="highlight-card">
+                        <i class="fa-solid fa-hand-holding-dollar icon"></i>
+                        <h3>Democratized Pricing</h3>
+                        <p>Eliminates expensive laboratory testing pipelines to maximize global access.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="technology" class="tech-section">
+        <div class="container">
+            <div class="section-header center-align">
+                <span class="sub-heading">Under The Hood</span>
+                <h2 class="main-heading">The Core Analytical Pipeline</h2>
+            </div>
+            <div class="tech-flow-wrapper">
+                
+                <div class="tech-card">
+                    <div class="step-num">01</div>
+                    <div class="card-icon-wrapper">
+                        <i class="fa-solid fa-camera"></i>
+                    </div>
+                    <h3>Optical Capture</h3>
+                    <p>The system anchors focus variables on a fluid target array to capture raw visual data under optimized environmental criteria.</p>
+                </div>
+
+                <div class="flow-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+
+                <div class="tech-card">
+                    <div class="step-num">02</div>
+                    <div class="card-icon-wrapper">
+                        <i class="fa-solid fa-bezier-curve"></i>
+                    </div>
+                    <h3>RGB Extraction</h3>
+                    <p>Image matrices are broken down into individual red, green, and blue components to map minor fluid color variances.</p>
+                </div>
+
+                <div class="flow-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+
+                <div class="tech-card">
+                    <div class="step-num">03</div>
+                    <div class="card-icon-wrapper">
+                        <i class="fa-solid fa-server"></i>
+                    </div>
+                    <h3>Pattern Cross-Match</h3>
+                    <p>Neural inference nodes run the extracted RGB data arrays through deep predictive modeling vectors instantly.</p>
+                </div>
+
+                <div class="flow-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+
+                <div class="tech-card">
+                    <div class="step-num">04</div>
+                    <div class="card-icon-wrapper">
+                        <i class="fa-solid fa-flask-vial"></i>
+                    </div>
+                    <h3>Quantitative Metrics</h3>
+                    <p>Calibration curve algorithms evaluate chemical deviation metrics to determine precise contamination percentages.</p>
+                </div>
+
+                <div class="flow-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+
+                <div class="tech-card">
+                    <div class="step-num">05</div>
+                    <div class="card-icon-wrapper">
+                        <i class="fa-solid fa-square-poll-horizontal"></i>
+                    </div>
+                    <h3>Actionable Reports</h3>
+                    <p>A readable report detailing safety metrics, chemical data, and structural recommendations is generated instantly.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="vision" class="vision-section">
+        <div class="container">
+            <div class="vision-grid">
+                <div class="vision-info">
+                    <span class="sub-heading">Our Mission</span>
+                    <h2 class="main-heading text-white">Cultivating Global Hydrological Integrity</h2>
+                    <p class="vision-p">
+                        We envision a future where secure, actionable insight into vital resources is open to all. By deploying standard mobile systems into a unified ecological web, HydroScan helps trace clean resource distribution networks on every continent.
+                    </p>
+                    <div class="why-choose-list">
+                        <div class="why-item">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Instant, high-fidelity safety indicators.</span>
+                        </div>
+                        <div class="why-item">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Zero field calibration gear or reagents needed.</span>
+                        </div>
+                        <div class="why-item">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Scales seamlessly across Android and iOS systems.</span>
+                        </div>
+                        <div class="why-item">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Eco-friendly infrastructure minimizing physical waste.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-box">
+                    <h3>Initiate Platform Scan</h3>
+                    <p>Connect with our engineering or deployment divisions to integrate our analytical pipeline within your ecosystem.</p>
+                    <form class="contact-form" onsubmit="event.preventDefault();">
+                        <div class="input-group">
+                            <label for="name">Operator Identity</label>
+                            <input type="text" id="name" placeholder="Your full name" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="email">Secure Routing Mail</label>
+                            <input type="email" id="email" placeholder="operator@domain.com" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="message">Deployment Brief</label>
+                            <textarea id="message" rows="4" placeholder="Describe your regional use case..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Deploy System Access</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Hydro Scan. Smart Water Quality Detection for a Healthier Tomorrow. 🌊🔍</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
