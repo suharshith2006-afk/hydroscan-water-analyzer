@@ -48,6 +48,7 @@ h1, h2, h3, h4 {
 
 .gradient-text {
     background: linear-gradient(135deg, var(--primary-blue), var(--secondary-cyan));
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
